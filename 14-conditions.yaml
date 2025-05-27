@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars_prompt:
-    - name: value
+      name: value
       prompt: "Enter a value to check if it is greater than, less than, or equal to 10"
       private: false
       type: int
