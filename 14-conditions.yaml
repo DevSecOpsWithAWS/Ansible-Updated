@@ -5,6 +5,7 @@
     - name: number
       prompt: "Enter a number to check if it is greater than, less than, or equal to 10"
       private: false
+      type: int
   tasks:
     - name: Print if the number is greater than 10.
       ansible.builtin.debug:
