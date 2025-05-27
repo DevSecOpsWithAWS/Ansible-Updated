@@ -2,20 +2,20 @@
   hosts: local
   connection: local
   vars_prompt:
-    - name: number
-      prompt: "Enter a number to check if it is greater than, less than, or equal to 10"
+    - name: value
+      prompt: "Enter a value to check if it is greater than, less than, or equal to 10"
       private: false
       type: int
   tasks:
-    - name: Print if the number is greater than 10.
+    - name: Print if the value is greater than 10.
       ansible.builtin.debug:
-        msg: "The number {{ number }} is greater than 10."
-      when: number > 10
-    - name: Print if the number is less than 10.
+        msg: "The value {{ value }} is greater than 10."
+      when: value > 10
+    - name: Print if the value is less than 10.
       ansible.builtin.debug:
-        msg: "The number {{ number }} is less than 10."
-      when: number < 10
-    - name: Print if the number is equal to 10.
+        msg: "The value {{ value }} is less than 10."
+      when: value < 10
+    - name: Print if the value is equal to 10.
       ansible.builtin.debug:
-        msg: "The number {{ number }} is equal to 10."
-      when: number == 10
+        msg: "The value {{ value }} is equal to 10."
+      when: value == 10
