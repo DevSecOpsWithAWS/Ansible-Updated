@@ -1,0 +1,25 @@
+- name: DevOps Course Information
+  hosts: local
+  connection: local
+  vars:
+    COURSE_NAME: "DevOps with AWS"
+    DURATION: "120HRS"
+    topics:
+      - linux
+      - git
+      - docker
+      - kubernetes
+      - jenkins
+      - terraform
+      - ansible
+      - 
+    live_project: true
+    tools:
+      ci: "Jenkins"
+      cd: "GitLab"
+      cloud: "AWS"
+
+  tasks:
+  - name: Print Course Information
+    ansible.builtin.debug:
+      msg: "Course name is {{ COURSE_NAME }}, Duration is {{ DURATION }}, Topics are {{ topics | join(', ') }}, Live Project: {{ live_project }}, CI Tool: {{ tools.ci }}, CD Tool: {{ tools.cd }}, Cloud Platform: {{ tools.cloud }}"
