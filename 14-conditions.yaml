@@ -9,12 +9,12 @@
     - name: Print if the value is greater than 10.
       ansible.builtin.debug:
         msg: "The value {{ value }} is greater than 10."
-      when: value > 10
+      when: value | int > 10
     - name: Print if the value is less than 10.
       ansible.builtin.debug:
         msg: "The value {{ value }} is less than 10."
-      when: value < 10
+      when: value | int < 10
     - name: Print if the value is equal to 10.
       ansible.builtin.debug:
         msg: "The value {{ value }} is equal to 10."
-      when: value == 10
+      when: value | int == 10
