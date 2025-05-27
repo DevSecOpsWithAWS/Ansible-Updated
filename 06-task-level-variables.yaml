@@ -5,6 +5,7 @@
     COURSE_NAME: "DevOps with AWS"
     DURATION: "120HRS"
     TRAINER: "Sivakumar"
+    
   tasks:
   - name: Print Task level variaables
     vars: # These are Task level variables
@@ -13,7 +14,7 @@
       TRAINER: "Chouda Reddy"
     ansible.builtin.debug:
       msg: "Course name is {{ COURSE_NAME }}, Duration is {{ DURATION }} and Trainer is {{ TRAINER }}"
-  tasks:
+  
   - name: Print play level variaables
     ansible.builtin.debug:
       msg: "Course name is {{ COURSE_NAME }}, Duration is {{ DURATION }} and Trainer is {{ TRAINER }}"
