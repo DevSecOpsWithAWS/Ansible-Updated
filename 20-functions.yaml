@@ -33,3 +33,10 @@
       ip: "1234.2345.3456.4567"
     ansible.builtin.debug:
       msg: "IP address is valid: {{ ip | ansible.utils.ipaddr }}"
+  name: convert to uppercase
+  tags:
+  - uppercase
+  vars:
+    text: "hello world"
+  ansible.builtin.debug:
+    msg: "Uppercase text: {{ text | upper }}"
