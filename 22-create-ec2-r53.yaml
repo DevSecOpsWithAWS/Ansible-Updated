@@ -6,7 +6,7 @@
     sg_id: sg-0a89d0b1ae02b30dd
     ami_id: ami-09c813fb71547fc4f
     instance_id: t2.micro
-    zone_name: "sridevsecops.store"
+    zone: "sridevsecops.store"
     instances:
     - mysql
     - backend
@@ -41,7 +41,7 @@
   - name: Create Route53
     amazon.aws.route53:
       state: present
-      zone: "{{ zone_name }}"
+      zone: "{{ zone }}"
       record: "{{ item.item }}.{{ zone }}"
       type: A
       ttl: 1
