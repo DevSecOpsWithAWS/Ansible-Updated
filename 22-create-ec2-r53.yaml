@@ -5,7 +5,7 @@
     subnet_id: subnet-06537747f3b689663
     sg_id: sg-0a89d0b1ae02b30dd
     ami_id: ami-09c813fb71547fc4f
-    instance_id: t2.mirco
+    instance_id: t2.micro
     instances:
     - mysql
     - backend
