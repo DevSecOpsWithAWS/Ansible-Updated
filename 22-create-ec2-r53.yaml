@@ -26,6 +26,7 @@
       image_id: "{{ ami_id }}"
       subnet_id: "{{ subnet_id }}"
       security_group: "{{ sg_id }}"
+      assign_public_ip: yes
     loop: "{{ instances }}"
     register: ec2_info
 
