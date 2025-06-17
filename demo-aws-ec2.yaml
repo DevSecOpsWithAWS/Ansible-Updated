@@ -1,4 +1,4 @@
-plugin: community.aws.aws_ec2
+plugin: amazon.aws.aws_ec2
 regions:
   - us-east-1
 
@@ -12,7 +12,3 @@ hostnames:
 
 compose:
   ansible_host: private_ip_address
-
-keyed_groups:
-  - key: tags.Name
-    prefix: tag
