@@ -4,7 +4,6 @@ regions:
 filters:
   tag:Name: nginx
   instance-state-name: running
-hostnames:
-  - private_ip_address
+hostnames: private_ip_address
 compose:
   ansible_host: private_ip_address
